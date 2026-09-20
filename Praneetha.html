@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<!DOCTYPE html>
+<!DOCTYPE html>
+<!DOCTYPE html>
+<!DOCTYPE html>
+<!DOCTYPE html>
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>For Praneetha ❤️</title>
+
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #ff758c, #ff7eb3);
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .box {
+            width: 85%;
+            max-width: 400px;
+            padding: 30px;
+            background: rgba(255,255,255,0.15);
+            border-radius: 25px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        h1 {
+            font-size: 32px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        button {
+            border: none;
+            padding: 13px 25px;
+            border-radius: 25px;
+            background: white;
+            color: #ff4f81;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        #message {
+            display: none;
+        }
+
+        .heart {
+            position: fixed;
+            bottom: -20px;
+            font-size: 20px;
+            animation: float 5s linear infinite;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-110vh);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+
+    <div id="start">
+        <h1>Hey Praneetha ❤️</h1>
+
+        <p>
+            I made something small for you...
+            <br>
+            Just tap the button 👀
+        </p>
+
+        <button onclick="showMessage()">
+            Open 💌
+        </button>
+    </div>
+
+    <div id="message">
+
+        <h1>For You, Praneetha 💗</h1>
+
+        <p>
+            I don't know what you think about me...
+            <br><br>
+
+            But somehow, seeing you makes my day
+            a little better. 😊
+            <br><br>
+
+            I never wanted to force anything.
+            I just wanted you to know...
+            <br><br>
+
+            <b>
+            Someone silently likes you more than
+            you probably know. ❤️
+            </b>
+        </p>
+
+        <p>
+            — From someone who smiles whenever he sees you 🥹
+        </p>
+
+    </div>
+
+</div>
+
+<script>
+function showMessage() {
+    document.getElementById("start").style.display = "none";
+    document.getElementById("message").style.display = "block";
+
+    for(let i = 0; i < 20; i++) {
+        let heart = document.createElement("div");
+
+        heart.className = "heart";
+        heart.innerHTML = "❤️";
+
+        heart.style.left = Math.random() * 100 + "%";
+        heart.style.animationDuration =
+            (3 + Math.random() * 4) + "s";
+
+        document.body.appendChild(heart);
+    }
+}
+</script>
+
+</body>
+</html>
